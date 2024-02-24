@@ -1,8 +1,8 @@
-import cssAudio from "./cssAudio";
+import cssAudio from "../core";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const start = await cssAudio({
-    src: "/lib/elevator.wav",
+    src: "/elevator.wav",
   });
 
   function play() {
