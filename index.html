@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Usage</title>
+
+    <style>
+        .text {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .bar-container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bar-1 {
+            display: block;
+            height: calc(var(--freq-low) / 200 * 1px);
+            width: 100px;
+            background-color: red;
+        }
+
+        .bar-2 {
+            display: block;
+            height: calc(var(--freq-mid) / 200 * 1px);
+            width: 100px;
+            background-color: green;
+        }
+
+        .bar-3 {
+            display: block;
+            height: calc(var(--freq-high) / 200 * 1px);
+            width: 100px;
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <h1 class="text">Click anywhere</h1>
+
+    <div class="bar-container">
+        <div class="bar-1"></div>
+        <div class="bar-2"></div>
+        <div class="bar-3"></div>
+    </div>
+
+
+</body>
+
+<script type="module" src="/src/example.ts"></script>
+
+</html>
