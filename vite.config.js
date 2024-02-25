@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   build: {
     lib: {
-      entry: "src/core/index.ts",
+      entry: "src/index.ts",
       name: "css-audio",
     },
   },

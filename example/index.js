@@ -1,4 +1,4 @@
-import cssAudio from "../core";
+import cssAudio from "../src";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const start = await cssAudio({

@@ -1,20 +1,18 @@
 {
-  "name": "css-audio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "build:example": "tsc && vite build --config src/example/vite.config.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^5.3.3",
-    "vite": "^5.1.4"
-  }
+    "name": "css-audio",
+    "version": "1.0.0",
+    "description": "A simple library that adds audio frequency data to a globally available css variable",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc && vite build"
+    },
+    "keywords": [],
+    "author": "Ben Hodgson",
+    "license": "ISC",
+    "devDependencies": {
+        "typescript": "^5.3.3",
+        "vite": "^5.1.4"
+    }
 }
