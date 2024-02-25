@@ -1,8 +1,8 @@
 {
     "name": "css-audio",
     "version": "1.0.0",
-    "description": "A simple library that adds audio frequency data to a globally available css variable",
-    "main": "index.js",
+    "description": "A simple way to animate your site with sound.",
+    "main": "src/index.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc && vite build"
