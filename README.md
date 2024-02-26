@@ -1,4 +1,6 @@
-
+<p align="center">
+<img align="center" width="300" src="https://github.com/BenjaminAHodgson/css-audio/blob/master/logo.svg" />
+</p>
 
 <h2 align="center">A simple way to animate your site with sound.</h2>
 
