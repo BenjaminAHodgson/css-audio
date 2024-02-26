@@ -15,5 +15,8 @@
     "typescript": "^5.3.3",
     "vite": "^5.1.4"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "css-audio": "^1.0.2"
+  }
 }
