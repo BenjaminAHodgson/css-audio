@@ -1,5 +1,5 @@
 {
-    "name": "@benjaminahodgson/css-audio",
+    "name": "css-audio",
     "version": "1.0.1",
     "description": "A simple way to animate your site with sound.",
     "main": "src/index.ts",
