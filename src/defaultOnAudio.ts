@@ -9,6 +9,10 @@ export default function defaultOnAudio(analyser: AnalyserNode) {
   document.documentElement.style.setProperty("--freq-low", `${lowSum}`);
   document.documentElement.style.setProperty("--freq-mid", `${midSum}`);
   document.documentElement.style.setProperty("--freq-high", `${highSum}`);
+  document.documentElement.style.setProperty(
+    "--track-time",
+    `${analyser.context.currentTime.toFixed(3)}`
+  );
 }
 
 function getSum(dataArray: Uint8Array, bufferLength: number) {
