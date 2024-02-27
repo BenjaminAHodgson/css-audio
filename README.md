@@ -66,6 +66,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 var(--freq-low)
 var(--freq-mid)
 var(--freq-high)
+var(--track-time)
+var(--track-duration)
 ```
 
 ### Example Project
