@@ -6,41 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example Usage</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
     <style>
-        .text {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+        :root {
+            background-color: black;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            --color-primary: #4444FF;
+            --track-completion: calc(var(--track-time) / var(--track-duration));
         }
 
-        .bar-container {
-            height: 100vh;
-            width: 100vw;
+        .prompt {
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             display: flex;
-            justify-content: center;
             align-items: center;
         }
 
-        .bar-1 {
+        .logo .text {
+            transform: rotate(calc(var(--freq-high) / 3400 * -.5deg)) scale(calc(var(--freq-mid) / 300 * .001 + clamp(.75, var(--track-completion), 5)));
+        }
+
+        .bar-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 160px;
+            gap: 5px;
+            margin-right: 10px;
+        }
+
+
+        .animated-bar {
             display: block;
-            height: calc(var(--freq-low) / 200 * 1px);
-            width: 100px;
-            background-color: red;
+            width: 15px;
+            background-color: var(--color-primary);
+        }
+
+        .bar-1 {
+            height: calc(var(--freq-high) / 450 * 1px);
         }
 
         .bar-2 {
-            display: block;
-            height: calc(var(--freq-mid) / 200 * 1px);
-            width: 100px;
-            background-color: green;
+            height: calc(var(--freq-mid) / 400 * 1px);
         }
 
         .bar-3 {
-            display: block;
-            height: calc(var(--freq-high) / 200 * 1px);
-            width: 100px;
-            background-color: blue;
+            height: calc(var(--freq-mid) / 300 * 1px);
+        }
+
+        .bar-4 {
+            height: calc(var(--freq-low) / 400 * 1px);
+        }
+
+        .bar-5 {
+            height: calc(var(--freq-mid) / 300 * 1px);
+        }
+
+        .bar-6 {
+            height: calc(var(--freq-mid) / 400 * 1px);
+        }
+
+        .bar-7 {
+            height: calc(var(--freq-high) / 450 * 1px);
+        }
+
+        body:not(.playing) .animated-bar {
+            height: 20px;
+        }
+
+        .playing .prompt {
+            display: none;
         }
     </style>
 
@@ -49,14 +95,27 @@
 
 
 <body>
-
-    <h1 class="text">Click anywhere</h1>
-
-    <div class="bar-container">
-        <div class="bar-1"></div>
-        <div class="bar-2"></div>
-        <div class="bar-3"></div>
+    <div class="prompt">
+        <h2>Click anywhere to play</h2>
     </div>
+
+    <div class="logo">
+
+
+
+        <div class="bar-container">
+            <div class="animated-bar bar-1"></div>
+            <div class="animated-bar bar-2"></div>
+            <div class="animated-bar bar-3"></div>
+            <div class="animated-bar bar-4"></div>
+            <div class="animated-bar bar-5"></div>
+            <div class="animated-bar bar-6"></div>
+            <div class="animated-bar bar-7"></div>
+        </div>
+        <h1 class="text">css-audio</h1>
+    </div>
+
+
 
 
 </body>

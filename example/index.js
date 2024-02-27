@@ -5,10 +5,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     src: "/elevator.wav",
   });
 
-  function play() {
-    start();
+  async function play() {
+    togglePlayingClass();
     document.removeEventListener("click", play);
+
+    const { source } = await start();
+
+    source.addEventListener("ended", () => {
+      togglePlayingClass();
+      document.addEventListener("click", play);
+    });
   }
 
   document.addEventListener("click", play);
 });
+
+function togglePlayingClass() {
+  document.body.classList.toggle("playing");
+}
