@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   css-audio:
-    specifier: ^1.0.2
-    version: 1.0.2
+    specifier: ^1.0.3
+    version: 1.0.3
 
 devDependencies:
   typescript:
@@ -334,8 +334,8 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
-  /css-audio@1.0.2:
-    resolution: {integrity: sha512-9ngJnvHqYJDcxW5/e8PlnZHNwGvzDGM107jNdOs3w4iDOZ5qaJiQrVt0SmGjeHaGY0lDGmrzYd6nLY/w98lliw==}
+  /css-audio@1.0.3:
+    resolution: {integrity: sha512-xdpjA4A8VVY1aTzYh12w3ofPPukch9ZleK5CW6jJwKo0FURekoqDNXZaIvou1ZIk8wlT2j8AzekzqZ8ZeaJCfg==}
     dev: false
 
   /esbuild@0.19.12:
