@@ -1,6 +1,6 @@
 {
     "name": "css-audio",
-    "version": "1.0.3",
+    "version": "0.0.3",
     "description": "A simple way to animate your site with sound.",
     "main": "src/index.ts",
     "scripts": {
