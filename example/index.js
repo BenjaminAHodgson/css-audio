@@ -2,7 +2,7 @@ import cssAudio from "css-audio";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const start = await cssAudio({
-    src: "/elevator.wav",
+    src: window.location.href + "/elevator.wav",
   });
 
   async function play() {
