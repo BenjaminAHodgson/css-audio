@@ -17,6 +17,6 @@
   },
   "type": "module",
   "dependencies": {
-    "css-audio": "^1.0.3"
+    "css-audio": "^0.0.3"
   }
 }
