@@ -60,6 +60,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 }
 ```
 
+```html
+<div class="bar"></div>
+```
+
 ### Default CSS Variables Available
 
 ```css
