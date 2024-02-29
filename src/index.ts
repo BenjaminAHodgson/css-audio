@@ -1,3 +1,4 @@
+import { connectDeviceAudio } from "./connectDevice";
 import defaultOnAudio from "./defaultOnAudio";
 
 declare global {
@@ -15,14 +16,19 @@ type CSSAudioOptions = {
 
 export default async function cssAudio(options: CSSAudioOptions) {
   const { animationFrameCallback = defaultOnAudio, src } = options;
-  const result = await fetch(src).then((response) => response.arrayBuffer());
+  const remoteStream = await fetch(src).then((response) =>
+    response.arrayBuffer()
+  );
+
+  const userStream = await connectDeviceAudio();
 
   async function init() {
     const context = new (window.AudioContext || window.webkitAudioContext)();
     const source = context.createBufferSource();
     const analyser = context.createAnalyser();
     const gainNode = context.createGain();
-    const buffer = await context.decodeAudioData(result.slice(0));
+    const userStreamSource = context.createMediaStreamSource(userStream);
+    const buffer = await context.decodeAudioData(remoteStream.slice(0));
 
     document.documentElement.style.setProperty(
       "--track-duration",
@@ -30,7 +36,10 @@ export default async function cssAudio(options: CSSAudioOptions) {
     );
 
     source.buffer = buffer;
-    source.connect(analyser).connect(gainNode).connect(context.destination);
+    userStreamSource
+      .connect(analyser)
+      .connect(gainNode)
+      .connect(context.destination);
     source.addEventListener("ended", () => {
       context.close();
     });
