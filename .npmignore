@@ -1,2 +1,5 @@
 /example
 /dist*
+logo.svg
+vite.config.js
+tsconfig.json
